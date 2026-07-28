@@ -1,0 +1,7 @@
+PAYMENT_CODE,PAYMENT_NAME
+CASH,Cash
+CARD,Credit Card
+DEBIT,Debit Card
+UPI,UPI
+WALLET,Gift Card
+NB,Net Banking

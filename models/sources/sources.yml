@@ -1,0 +1,71 @@
+version: 1
+
+sources:
+  - name: RAW
+    database: DEV_DB
+    schema: STAGING
+    tables:
+      - name: STORE_TRANSACTIONS_TGT
+        description: "Raw store transactions data loaded from source system"
+        columns:
+          - name: TransactionID
+            description: "Unique identifier for each transaction"
+            tests:
+              - unique
+              - not_null
+      - name: PRODUCT_SALES_ORDERS_TGT
+        description: "Raw product sales order data loaded from source system"
+        columns:
+          - name: OrderID
+            description: "Unique identifier for each sales order"
+            tests:
+              - unique
+              - not_null
+      - name: ONLINE_STORE_ORDERS_TGT
+        description: "Raw online store orders data loaded from source system"
+        columns:
+          - name: OrderID
+            description: "Unique identifier for each online order"
+            tests:
+              - unique
+              - not_null
+      - name: PRODUCT_INVENTORY_TGT
+        description: "Raw product inventory data loaded from source system"
+        columns:
+          - name: ProductID
+            description: "Unique identifier for each product"
+            tests:
+              - unique
+              - not_null
+      - name: CUSTOMER_PURCHASES_TGT
+        description: "Raw customer purchases data loaded from source system"
+        columns:
+          - name: CustomerID
+            description: "Unique identifier for each customer purchase"
+            tests:
+              - unique
+              - not_null
+      - name: PRODUCT_MASTER
+        description: "Raw product master data loaded from source system"
+        columns:
+          - name: ID
+            description: "Unique identifier for each product in the master data"
+            tests:
+              - unique
+              - not_null
+      - name: PRODUCT_TAGS
+        description: "Raw product tags data loaded from source system"
+        columns:
+          - name: TAG
+            description: "Tags associated with products for categorization"
+            tests:
+              - unique
+              - not_null
+      - name: PRODUCT_IMAGES
+        description: "Raw product images data loaded from source system"
+        columns:
+          - name: IMAGE_URL
+            description: "URL of the product image"
+            tests:
+              - unique
+              - not_null
